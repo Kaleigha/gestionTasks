@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-bs-theme="dark">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,31 +9,33 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<body style="width:50%;" class="mx-auto ">
+<body style="width:50%; " class="mx-auto ">
     <header class="container text-center mb-5 mt-5">
         <h1>Todolist</h1>
     </header>
     <main>
-        <div class="container-fluid bg-success pb-3 pt-3 mb-3 rounded border border-white shadow-lg">
+        <div class="container-fluid pb-3 pt-3 mb-3 rounded border border-white shadow-lg" style="background: rgb(216,231,231);
+background: linear-gradient(90deg, rgba(216,231,231,1) 0%, rgba(61,163,236,1) 32%, rgba(204,232,245,1) 100%);">
             <form method="post" action="{{route('newTask')}}">
                 @csrf
                 <div class="mb-3">
                     <label for="title" class="form-label">Titre</label>
-                    <input type="title" name="title" class="form-control" id="title" aria-describedby="title">
+                    <input type="title" name="title" class="form-control" id="title" aria-describedby="title" required>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <input type="description" name="description" class="form-control" id="description">
+                    <input type="description" name="description" class="form-control" id="description" required>
                 </div>
                 <div class="mb-3 ">
                     <label for="status" class="form-label">Status</label>
-                    <input type="status" name="status" class="form-control" id="status">
+                    <input type="status" name="status" class="form-control" id="status" required>
                 </div>
                 <button type="submit" class="btn btn-dark border border-white">Enregistrer</button>
             </form>
         </div>
-        <ul class="container text-center bg-success rounded pt-5 pb-5 shadow-lg">
-            <li class="row bg-success-subtle pt-2">
+        <ul class="container text-center bg-light rounded pt-5 pb-5 shadow-lg">
+            <li class="row pt-2" style="background: rgb(216,231,231);
+background: linear-gradient(90deg, rgba(216,231,231,1) 0%, rgba(61,163,236,1) 32%, rgba(69,194,252,1) 100%);">
                 <p class="col">Titre</p>
                 <p class="col">Description</p>
                 <p class="col">Status</p>

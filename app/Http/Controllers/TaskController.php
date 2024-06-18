@@ -13,10 +13,6 @@ class TaskController extends Controller
         return view('index', compact('tasks'));
     }
 
-    public function create()
-    {
-        return redirect('/index');
-    }
     public function store(Request $request)
     {
         $post = Task::create([

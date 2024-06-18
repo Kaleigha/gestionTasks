@@ -9,8 +9,8 @@ Route::get('/', function () {
 
 Route::get('/index', [TaskController::class, 'index']);
 
-Route::get('/index/nouveau', [TaskController::class, 'create'])->name('newTask');
-Route::post('/index/nouveau', [TaskController::class, 'store']);
+Route::post('/index/nouveau', [TaskController::class, 'store'])->name('newTask');
+
 
 Route::get('/index/update/{id}', [TaskController::class, 'update'])->name('updateTask');
 
